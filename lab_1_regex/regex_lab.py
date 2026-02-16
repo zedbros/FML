@@ -13,7 +13,7 @@ class RegexExercises:
     """
 
     
-    def planets():
+    def planets(): # 1
         """
         Correspond aux noms des huit planètes, en majuscule initiale (c'est-à-dire,
         Mercury, Venus, Earth, etc.). Il y a 44 lignes dans BleakHouse.txt qui
@@ -22,15 +22,15 @@ class RegexExercises:
         return r"Earth|Jupiter|Neptune|Mars|Saturn|Venus|Uranus|Mercury"  # cette première expression est déjà réalisée pour vous
 
     
-    def dashes():
+    def dashes(): # 2
         """
         Correspond à deux tirets consécutifs: --. Il y a 1802 lignes dans BleakHouse.txt
         qui comportent deux tirets.
         """
-        return r"" # A compléter
+        return r"[-]{2}" # A compléter
 
     
-    def quotes():
+    def quotes(): # 3
         """
         Correspond à une chaîne entre guillemets, c'est-à-dire une chaîne qui commence
         et finit par des guillemets doubles sur une seule ligne et qui contient
@@ -40,30 +40,30 @@ class RegexExercises:
         non alphanumérique, et que le deuxième guillemet ait un caractère non alphanumérique
         après lui.
         """
-        return r""
+        return r"(^|\W)\"(.+?)\"\W"
 
     
-    def rain():
+    def rain(): # 4
         """
         Correspond à un match contenant des mots qui commencent par "rain". Cela inclut
         "Rain", "raindrop", "raining", etc., mais pas "brains". 
         """
-        return r""
+        return r"\b(R|r)ain.*?"
 
     
-    def east():
+    def east(): # 5
         """
         Correspond à un match avec le mot "east". Cela inclut "East" mais pas "eastern".
         """
-        return r""  # bordure de mot pour ne pas inclure "eastern"
+        return r"\b(e|E)ast\b"  # bordure de mot pour ne pas inclure "eastern"
 
     
-    def hyphenated():
+    def hyphenated(): # 6
         """
         Correspond à un match avec des mots comportant un tiret. Par exemple, cela inclut
         "assembly-room", "half-a-dozen" et même "en-r-r-r-raged."
         """
-        return r""  # un mot suivi d'un tiret et d'au moins un mot
+        return r"(\w)+(-(\w)+)+"  # un mot suivi d'un tiret et d'au moins un mot
 
     # ----------------------------------------------------------------------
     # Maintenant, nous quittons Bleak House pour étudier les nombres. Chaque ligne du 
@@ -75,32 +75,32 @@ class RegexExercises:
     # ----------------------------------------------------------------------
 
     
-    def digits():
+    def digits(): # 7
         """
         Correspond à une séquence de chiffres. Cela doit correspondre seulement à
         la première ligne de numbers.txt.
         """
-        return r""  # ^ pour le début de ligne, puis chiffres, puis espaces
+        return r"^\d+\s+"  # ^ pour le début de ligne, puis chiffres, puis espaces
 
     
-    def ssn():
+    def ssn(): # 8
         """
         Correspond aux numéros de sécurité sociale. Cela doit correspondre seulement
         à la deuxième ligne de numbers.txt.
         """
-        return r""  # format type ssn suivi d'espaces
+        return r"^[\d]{3}-[\d]{2}-[\d]{4}\s+"  # format type ssn suivi d'espaces
 
     
-    def commaNumbers():
+    def commaNumbers(): # 9
         """
         Correspond aux nombres avec des virgules, comme 23,354.
         Ce motif doit correspondre uniquement aux lignes troisième, quatrième, cinquième
         et sixième du fichier numbers.txt.
         """
-        return r""  # un ou plusieurs groupes de chiffres séparés par des virgules
+        return r"^\d{1,3}(,\d{3})+"  # un ou plusieurs groupes de chiffres séparés par des virgules
 
     
-    def decimalNumbers():
+    def decimalNumbers(): # 10
         """
         Correspond à une chaîne de chiffres avec un point décimal.
         Le point décimal peut se trouver en début ou en fin, mais il doit être présent,
@@ -108,10 +108,10 @@ class RegexExercises:
         neuvième, dixième et onzième lignes de numbers.txt.
         """
         # On autorise soit: chiffre(s)+point ou point+chiffre(s) ou chiffre(s)+point+chiffres
-        return r""
+        return r"\b((\d+\.\d*)|(\d*\.\d+))(?!E)"
 
     
-    def realNumbers():
+    def realNumbers(): # 11
         """
         Correspond à des nombres réels qui commencent éventuellement par un signe (+ ou -),
         suivis d'une séquence d'au moins un chiffre qui peut contenir un point, éventuellement
@@ -119,6 +119,6 @@ class RegexExercises:
         Ce motif doit correspondre à la première, aux neuvième à onzième, et aux cinq dernières lignes
         du fichier numbers.txt (c'est-à-dire, toutes les lignes contenant des nombres sans virgules).
         """
-        return r""
+        return r"^(\+|\-)?(\d+(\.\d+|\.E(\+|\-)?\d+)?|.(\d+|(E|e)(\+|\-)?\d+)?)"
 
 
