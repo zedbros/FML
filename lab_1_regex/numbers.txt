@@ -1,0 +1,17 @@
+1234             Integer or real number
+123-45-6789      SSN
+23,354           Numbers with commas
+4,345,205        Numbers with commas
+24,345,205       Numbers with commas
+454,345,205      Numbers with commas
+43,45,2,05       A list of numbers
+3343,345         A list of numbers
+.4               Number with a dot (real number)
+123.             Number with a dot (real number)
+4.43             Number with a dot (real number)
+.                Not a number with a dot
++1               Real number
+1e3              Real number
+1e-3             Real number
+1.E+2            Real number
+-1.23E-12        Real number
