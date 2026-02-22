@@ -108,7 +108,7 @@ class RegexExercises:
         neuvième, dixième et onzième lignes de numbers.txt.
         """
         # On autorise soit: chiffre(s)+point ou point+chiffre(s) ou chiffre(s)+point+chiffres
-        return r"\b((\d+\.\d*)|(\d*\.\d+))(?!E)"
+        return r"((\d+\.\d*)|(\d*\.\d+))(?=\s)" # SHOULD BE CORRECT
 
     
     def realNumbers(): # 11
@@ -119,6 +119,5 @@ class RegexExercises:
         Ce motif doit correspondre à la première, aux neuvième à onzième, et aux cinq dernières lignes
         du fichier numbers.txt (c'est-à-dire, toutes les lignes contenant des nombres sans virgules).
         """
-        return r"^(\+|\-)?(\d+(\.\d+|\.E(\+|\-)?\d+)?|.(\d+|(E|e)(\+|\-)?\d+)?)"
-
+        return r"(?<!.)((\+|\-)?\d+)?\.?(((E|e)(\+|\-)?)?\d+)(?=\s)"
 
