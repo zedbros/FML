@@ -119,5 +119,5 @@ class RegexExercises:
         Ce motif doit correspondre à la première, aux neuvième à onzième, et aux cinq dernières lignes
         du fichier numbers.txt (c'est-à-dire, toutes les lignes contenant des nombres sans virgules).
         """
-        return r"(?<!.)((\+|\-)?\d+)?\.?(((E|e)(\+|\-)?)?\d+)(?=\s)"
+        return r"(?<!.)(\+|\-)?(\d+\.)?((\+|\-)?\d+)?\.?(((E|e)(\+|\-)?)?\d+)(?=\s)"
 

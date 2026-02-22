@@ -93,7 +93,7 @@ class Helper:
 # Code permettant d'exécuter le pilote ou les tests
 if __name__ == '__main__':
     # Décommentez la ligne suivante pour vous aider à visualiser les résultats de vos expressions régulières
-    # Helper.main()
+    Helper.main()
     
     # Pour exécuter les tests unitaires avec l'option failfast, utilisez :
     unittest.main(failfast=True)
