@@ -22,6 +22,48 @@ def initialize_grid(grid):
     grid[4][6] = 1
     grid[4][7] = 1
 
+def glider_initialize_grid(grid):
+    grid[0][1] = 1
+    grid[1][2] = 1
+    grid[2][0] = 1
+    grid[2][1] = 1
+    grid[2][2] = 1
+
+def beehive_initialize_grid(grid):
+    # place la ruche en position (4,4)
+    grid[4][5] = 1
+    grid[4][6] = 1
+    grid[5][4] = 1
+    grid[5][7] = 1
+    grid[6][5] = 1
+    grid[6][6] = 1
+
+def taod_initialize_grid(grid):
+    # place le toad en position (4,4)
+    grid[4][5] = 1
+    grid[4][6] = 1
+    grid[4][7] = 1
+    grid[5][4] = 1
+    grid[5][5] = 1
+    grid[5][6] = 1
+
+def pulsar_initialize_grid(grid):
+    # première rangée horizontale de bras
+    grid[2][4] = 1; grid[2][5] = 1; grid[2][6] = 1
+    grid[2][10] = 1; grid[2][11] = 1; grid[2][12] = 1
+    # partie haute
+    grid[4][2] = 1; grid[4][7] = 1; grid[4][9] = 1; grid[4][14] = 1
+    grid[5][2] = 1; grid[5][7] = 1; grid[5][9] = 1; grid[5][14] = 1
+    grid[6][2] = 1; grid[6][7] = 1; grid[6][9] = 1; grid[6][14] = 1
+    # partie basse symétrique
+    grid[7][4] = 1; grid[7][5] = 1; grid[7][6] = 1; grid[7][10] = 1; grid[7][11] = 1; grid[7][12] = 1
+    grid[9][4] = 1; grid[9][5] = 1; grid[9][6] = 1; grid[9][10] = 1; grid[9][11] = 1; grid[9][12] = 1
+    grid[10][2] = 1; grid[10][7] = 1; grid[10][9] = 1; grid[10][14] = 1
+    grid[11][2] = 1; grid[11][7] = 1; grid[11][9] = 1; grid[11][14] = 1
+    grid[12][2] = 1; grid[12][7] = 1; grid[12][9] = 1; grid[12][14] = 1
+    # rangée horizontale basse (mi-oscillation)
+    grid[14][4] = 1; grid[14][5] = 1; grid[14][6] = 1; grid[14][10] = 1; grid[14][11] = 1; grid[14][12] = 1
+
 def count_neighbors(grid, row, col):
     count = 0
     for i in range(-1, 2):
