@@ -1,7 +1,7 @@
 # Minimal example: call an LLM via OpenRouter's API.
 import requests
 
-API_KEY = "PUT YOUR OPENROUTER API KEY HERE"
+API_KEY = open("lab_5_classification/auth.txt", "r").readline()
 
 response = requests.post(
     "https://openrouter.ai/api/v1/chat/completions",

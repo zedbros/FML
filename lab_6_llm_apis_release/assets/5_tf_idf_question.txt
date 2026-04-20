@@ -1,0 +1,45 @@
+corpus (4 documents):
+
+d1 = I like cookies
+d2 = but what I like the most is chocolate
+d3 = because chocolate is the best, especially white chocolate
+d4 = Long Live Chocolate!
+
+0) let's say that preprocessing is defined as:
+
+- lowercasing
+- stopwords: (i but what the most is because long)
+- stemming: remove ending 's'
+- remove punctuation
+
+1) preprocess the documents
+
+d1 =
+d2 =
+d3 =
+d4 =
+
+2) create inverted index
+
+word       |   doc ids
+========================
+
+3) compute tf for "chocolate"
+tf("chocolate", d1) =
+tf("chocolate", d2) =
+tf("chocolate", d3) =
+tf("chocolate", d4) =
+
+
+4) compute idf for "chocolate" and "cookie"
+
+idf("chocolate")    =
+idf("cookie")       =
+
+
+5) compute tfidf for "chocolate"
+
+tfidf("chocolate", d1) =
+tfidf("chocolate", d2) =
+tfidf("chocolate", d3) =
+tfidf("chocolate", d4) =
